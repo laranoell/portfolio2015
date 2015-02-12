@@ -1,0 +1,251 @@
+#home{
+	padding-top:$introHeight;
+	@include media($lessBig){
+		padding-top:0;
+	}
+	.work-ex, .tools, .callout, .contact{
+		// parralax effect: layer sections above footer
+		position: relative;
+		z-index:5;
+	}
+	.intro{
+		position: fixed;
+		height:$introHeight;
+		top:0;
+		left:0;
+		right:0;
+		z-index:1;
+		background-color:#eee;
+		text-align:center;
+		padding: golden-ratio(1em, 4) 0 golden-ratio(1em, 2);
+		h2{
+			display:inline-block;
+			padding:.25em;
+			background: $medGrey;
+			color:#eee;
+		}
+		h3{
+		}
+		@include media($lessBig){
+			position:static;
+			height:auto;
+			padding: golden-ratio(1em, 4) 0 golden-ratio(1em, 1);
+		}
+	}
+	.work-ex{
+		background:$manilla;		
+		padding: golden-ratio(1em, 3) 0;
+		h2{
+			display:none;
+		}
+		.projects{
+			list-style-type: none;
+			margin: 0;
+			padding:0;
+			@include row();
+			.project {
+				@include span-columns(4);
+				@include omega(3n);	
+				position:relative;
+				padding:2px;
+				//padding to increase whitespace between projects a touch
+				a{
+					display:block;	
+					.shots{
+						// mobile and desktop imgs kept separate incase of layout change in future
+						@include row;
+						margin-bottom:golden-ratio(1em, 1);
+						.shot{
+							border:1px solid #eee;
+							display:block;
+							width:100%;
+							height:auto;
+							&.desktop{
+								@include span-columns(9);
+							}
+							&.mobile{
+								@include span-columns(3);
+								@include omega();			
+							}
+						}
+					}
+					.overlay{
+						@include transition(all .3s ease-in);
+						padding: golden-ratio(1em, 1) golden-ratio(1em, -1);
+						color: #eee;
+						background:darken($medGrey, 5%);
+						text-align: center;
+						width:90%;							
+						position:absolute;
+						z-index:5;
+						top:  golden-ratio(1em, 4);
+						left:5%;
+						right:5%;
+						opacity:0;
+						.p-title{
+							@include transition(all .7s ease-in);
+							opacity:0;
+							margin-top:.25em;
+							display:inline-block;
+							.emphasis{
+								@include transition(all .5s ease-in);
+								display: block;
+								margin: 0 .75em;
+								background-color:transparent;
+								border-radius:5px;
+								height:3px;
+							}
+						}
+						.role{
+							color: $mutedGrey;
+						}
+						p{
+							// hide extra info for now
+							display:none;
+							-webkit-font-smoothing: antialiased;
+						    -moz-osx-font-smoothing: grayscale;
+						    text-rendering: optimizeLegibility;
+						}
+					}
+					&:hover{
+						cursor: pointer;	
+						.overlay{
+							opacity:1;
+							.p-title{
+								opacity:1;
+								.emphasis{
+									background-color:$mutedGrey;
+									margin: 0;
+								}
+							}
+							.role{
+								opacity:1;
+							}
+						}
+					}
+				}
+				&.york{
+					@include animation(fadeInUp .5s ease-in);
+				}
+				&.tel{
+					@include animation(fadeInUp .75s ease-in);
+				}
+				&.clio{
+					@include animation(fadeInUp 1s ease-in);
+				}
+			}
+		}
+		@include media($lessBig){
+			padding: golden-ratio(1em, 2) 0 golden-ratio(1em, 1);
+		}
+		@include media($tab){
+			.projects{
+				.project{
+					a{
+						.overlay{
+							opacity:1;
+							.p-title{
+								opacity:1;
+								.emphasis{
+									background-color:darken($lightGrey, 8%);
+									margin: 0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		@include media($mob){
+			padding: golden-ratio(1em, 2) 0;
+			.projects{
+				.project{
+					@include fill-parent;
+					margin-bottom:golden-ratio(1em, 2);
+					&:last-child{
+						margin-bottom:0;
+					}
+					a{
+						.overlay{
+							opacity:1;
+							position:static;
+							@include fill-parent;
+							padding:golden-ratio(1em, -1);
+							margin-bottom:golden-ratio(1em, 1);
+							.p-title{
+								opacity:1;
+								.emphasis{
+									background-color:darken($lightGrey, 8%);
+									margin: 0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.tools{
+		@include row();
+		background: $lightGrey;
+		color:$medGrey;
+		padding: golden-ratio(1em, 3) 0 golden-ratio(1em, 1);
+		.tools-title{
+			text-align:center;
+			span{
+				display:inline-block;
+				padding:.25em;
+				text-align:center;
+				color:$mutedGrey;
+				background:#eee;
+			}
+		}
+		img{
+			@include span-columns(2.5);
+			@include shift(1);
+			opacity:.4;
+			padding: golden-ratio(1em, 1);
+		}
+		ul{
+			list-style-type: none;
+			margin: 0;
+			padding: golden-ratio(1em, 2) 0 golden-ratio(1em, 1);
+			@include span-columns(7);
+			@include shift(.5);
+			@include omega();
+			li{
+				@include span-columns(1 of 5);
+				@include omega(5n);
+				color:lighten($medGrey, 8%);
+			}
+		}
+		@include media($lessBig){
+			padding: golden-ratio(1em, 2) 0 0;
+		}
+		@include media($mob){
+			padding: golden-ratio(1em, 1) 0  golden-ratio(1em, 2);
+			img{
+				display:none;
+			}
+			ul{
+				@include fill-parent;
+				@include shift(0);
+				padding: 1em 0 0 0;
+			}
+		}
+		@include media($tiny){
+			ul{
+				li{
+					&:nth-child(5n){
+						margin-right:.75em;
+					}
+					&:nth-child(5n + 1){
+						clear:none;
+					}
+					@include span-columns(1 of 3);
+					margin-right:.75em;
+				}
+			}
+		}
+	}
+}

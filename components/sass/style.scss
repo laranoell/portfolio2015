@@ -1,0 +1,23 @@
+/*
+Lara Noell's Portfolio
+*/
+
+//Bourbon paths will need to be updated if loaded with bower
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+@import "global/reset";
+@import "global/variables";
+@import "global/animations";
+@import "global/mixins";
+@import "global/base";
+
+@import "sections/header";
+@import "sections/footer";
+@import "sections/about";
+@import "sections/contact";
+@import "sections/home";
+@import "sections/work";
+@import "sections/blog";
+
+

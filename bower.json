@@ -1,0 +1,31 @@
+{
+  "name": "LaraNoellPortfolio",
+  "version": "0.0.1",
+  "main": "scripts.js",
+  "ignore": [
+    ".jshintrc",
+    "node_modules",
+    "bower_components",
+    "**/.*",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "",
+    "lodash": "~2.4.1",
+    "jquery": "",
+    "selectivizr": "~1.0.2",
+    "bourbon": "3.2.3",
+    "neat": "1.5.1"
+  },
+  "authors": [
+    "Lara Noell <lara.noell@gmail.com>"
+  ],
+  "description": "Laras work",
+  "homepage": "http://www.laranoell.com",
+  "private": true,
+  "devDependencies": {
+    
+  },
+  "license": "MIT"
+}

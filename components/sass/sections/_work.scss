@@ -1,0 +1,130 @@
+#work{
+	header{
+		background:black;
+		.title{
+			color:white;
+		}	
+	}
+	.proj-nav{
+		display:none;
+	}
+	.projects{
+		@include outer-container;
+		.project{
+			@include span-columns(10);
+			@include shift(1);
+			@include omega();		
+			padding-top: golden-ratio(1em, 2);
+			padding-bottom: golden-ratio(1em, 2);
+			text-align:center;
+			.shots{
+				@include row();
+				@include transition(all .3s ease-in-out);
+				margin-bottom:golden-ratio(1em, 1);
+				.shot{
+					border:1px solid #eee;
+					display:block;
+					width:100%;
+					height:auto;
+					&.desktop{
+						@include span-columns(9);
+					}
+					&.mobile{
+						@include span-columns(3);
+						@include omega();			
+					}
+				}
+			}
+			.description{
+				@include row();
+				padding: golden-ratio(1em, 2);
+				background-color: #eee;
+				text-align:left;
+				.visit{
+					@include transition(all .35s ease-in-out);
+					font-size: 1.75em;
+					line-height: 1.25em;
+					padding: .25em 0 .5em;
+					color:black;
+					display:block;
+					height:auto;
+					margin: 0 auto;
+					line-height:60px;
+					font-weight:600;
+					text-decoration: none;
+					.fa{
+						
+						opacity:0;
+					}
+					&:hover{
+						color: #3D3C3A;
+						text-decoration: underline;
+						.fa{
+							
+							opacity:1;
+						}
+					}
+				}
+				.p-title{
+					
+				}
+				.role{
+					
+				}
+			}
+			&:hover{
+				.description{
+					
+				}	
+			}
+			&.tel{
+
+			}
+			&.york{
+				
+			}
+			&.clio{
+				
+			}
+			&.wed{
+				
+			}
+			&.ftb{
+				
+			}
+		}
+	}	
+}
+// .personal-projects{
+// 	@include fill-parent();
+// 	margin-bottom: golden-ratio(1em, 1);
+// 	&:last-child{
+// 		@include reset-display();
+// 	}
+// 	.pp{
+// 		@include span-columns(6);
+// 		@include row(table);
+// 		@include pad(golden-ratio(1em, -2));
+// 		vertical-align: middle;
+
+// 		img{
+// 			display:block;
+// 			width:120px;
+// 			height:auto;
+// 			display: none;	
+// 		}
+// 		.icon{
+// 			display:block;
+// 			@include span-columns(4);
+// 			height:auto;
+// 			float:right;
+// 			margin-right: golden-ratio(1em, 1);
+// 			opacity:.8;
+// 		}
+// 		.pp-title{
+// 			@include span-columns(8);
+// 			padding: 0;
+// 			vertical-align: middle;
+// 		}
+// 	}
+// }

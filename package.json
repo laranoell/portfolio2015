@@ -1,0 +1,40 @@
+{
+  "name": "LaraNoell",
+  "version": "0.0.1",
+  "description": "My Build Process",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/laranoell/mybuild.git"
+  },
+  "author": "LNoell",
+  "devDependencies": {
+    "browser-sync": "~1.3.0",
+    "gulp": "~3.8.10",
+    "gulp-autoprefixer": "^1.0.0",
+    "gulp-browserify": "^0.5.0",
+    "gulp-cache": "^0.2.2",
+    "gulp-changed": "^1.0.0",
+    "gulp-concat": "^2.3.4",
+    "gulp-csso": "~0.2.9",
+    "gulp-flatten": "0.0.4",
+    "gulp-if": "^1.2.4",
+    "gulp-imagemin": "~2.0.0",
+    "gulp-livereload": "",
+    "gulp-load-plugins": "^0.7.0",
+    "gulp-minify-css": "^0.4.5",
+    "gulp-minify-html": "^0.1.4",
+    "gulp-sass": "^1.2.0",
+    "gulp-size": "^1.0.0",
+    "gulp-uglify": "^0.3.1",
+    "gulp-uncss": "^0.5.0",
+    "gulp-util": "^2.2.20",
+    "gulp-watch": "~0.6.9",
+    "node-neat": "~1.3.0",
+    "run-sequence": "^1.0.1"
+  },
+  "dependencies": {
+    "jquery": "^2.1.3",
+    "node-bourbon": "~1.2.3",
+    "psi": "~0.1.6"
+  }
+}

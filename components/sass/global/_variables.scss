@@ -1,0 +1,19 @@
+$lightGrey: #d8d8d8;
+$brandColor: #1a99aa;
+$medGrey: #484848;
+$darkGrey: #2e2e2e;
+$mutedGrey:#b9b9b9;
+$muddyGrey: #868686;
+$blue: #3bbfce;
+$manilla: #f5f4f4;
+$margin: 16px;
+$introHeight: 20em;
+
+$big: new-breakpoint(min-width 1089);
+$lessBig: new-breakpoint(max-width 1087px);
+$tab: new-breakpoint(max-width 950px);
+$mob: new-breakpoint(max-width 769px);
+$tiny: new-breakpoint(max-width 420px);
+
+
+
