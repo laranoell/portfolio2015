@@ -32,7 +32,7 @@ var gulp        = require('gulp'),
     'bb >= 10'
 ];
 
-env = 'production';
+env = 'development';
 
 if (env==='development') {
   outputDir = 'builds/development/';
