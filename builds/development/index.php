@@ -8,16 +8,16 @@
   if(isset($_POST['check'])) {
     $message .= 'Client has: ';
     foreach ($_POST['check'] as $item) {
-      $message .= '\r\n' . $item;
+      $message .= "\r\n" . $item;
     }
   }
   if(isset($_POST['time'])){
     $time = $_POST['time'];
-    $message .= '\r\n' . ' Target Launch: ' . $_POST['time'];
+    $message .= "\r\n" . ' Target Launch: ' . $_POST['time'];
   }
   if(isset($_POST['budget'])){
    $budget = $_POST['budget'];
-   $message .= '\r\n' . ' Target Budget: ' . $_POST['budget']; 
+   $message .= "\r\n" . ' Target Budget: ' . $_POST['budget']; 
   }
   if( isset( $_POST[ 'email' ] ) ) {
     $email = strip_tags( $_POST[ 'email' ] );
@@ -26,7 +26,7 @@
       $errors[ 'email' ] = '<div class="error-msg">*check your email address</div>';
     } 
     if( isset( $_POST[ 'message' ] ) ) {
-      $message  .= '\r\n' . ' Message: ' . strip_tags( $_POST[ 'message' ] );
+      $message  .= "\r\n" . ' Message: ' . strip_tags( $_POST[ 'message' ] );
       if( strlen( $_POST[ 'message' ] ) < 3 ){
         $errors[ 'message' ] = '<div class="error-msg">*write me something.</div>';
       }
